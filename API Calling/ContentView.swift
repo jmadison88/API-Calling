@@ -15,10 +15,10 @@ struct ContentView: View {
             List(entries) { entry in
                 VStack(alignment: .leading) {
                     Link(destination: URL(string: entry.image)!) {
-                        Text(entry.name)
+                        Text(entry.name).font(.title3)
                     }
-                    Text(entry.description)
-                    Text(entry.cooking_effect).bold()
+                    Text(entry.description).fontWeight(.light)
+                    Text(entry.cooking_effect).fontWeight(.heavy)
                 }
             }
             .navigationTitle("Hyrule Creatures (No Drops)")
